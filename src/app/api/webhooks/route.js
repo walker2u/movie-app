@@ -1,4 +1,4 @@
-import { createOrUpdateUser, deleteUser } from '@/lib/actions/user';
+import { createOrUpdateUser, deleteUser } from '../../../lib/actions/user';
 import { clerkClient } from '@clerk/nextjs/dist/types/server';
 import { verifyWebhook } from '@clerk/nextjs/webhooks'
 
