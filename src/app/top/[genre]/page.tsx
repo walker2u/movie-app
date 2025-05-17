@@ -7,7 +7,7 @@ import { useParams } from "next/navigation";
 interface MovieCardProps {
   _id: string;
   title: string;
-  description: string;
+  synopsis: string;
   image: string;
   status: string;
 }
@@ -15,8 +15,6 @@ interface MovieCardProps {
 function TopPages() {
   const [movies, setMovies] = useState<MovieCardProps[]>([]);
   const params = useParams<{ genre: string }>();
-
-  console.log(movies);
 
   useEffect(() => {
     const fetchMovies = async () => {
@@ -48,7 +46,7 @@ function TopPages() {
             _id={movie._id}
             key={movie.title}
             title={movie.title}
-            description={movie.description}
+            synopsis={movie.synopsis}
             image={movie.image}
             status={movie.status}
           />

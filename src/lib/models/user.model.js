@@ -1,4 +1,5 @@
 import mongoose from 'mongoose';
+import { type } from 'os';
 
 const favSchema = new mongoose.Schema({
     movieId: {
@@ -9,22 +10,17 @@ const favSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    description: {
+    synopsis: {
         type: String,
-        required: true,
-    },
-    dateReleased: {
-        type: Date,
-        required: true,
-    },
-    rating: {
-        type: Number,
         required: true,
     },
     image: {
         type: String,
         required: true,
     },
+    status: {
+        type: String
+    }
 });
 
 const userSchema = new mongoose.Schema(
